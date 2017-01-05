@@ -1,0 +1,30 @@
+var bug;  // Declare object
+
+function setup() {
+  createCanvas(displayWidth, displayHeight);
+  // Create object
+  bug = new Jitter();
+}
+
+function draw() {
+  background(50, 89, 100);
+  bug.move();
+  bug.display();
+}
+
+// Jitter class
+function Jitter() {
+  this.x = random(width);
+  this.y = random(height);
+  this.diameter = random(10, 30);
+  this.speed = 1;
+
+  this.move = function() {
+    this.x = mouseX;
+    this.y = mouseY;
+  };
+
+  this.display = function() {
+    ellipse(this.x, this.y, this.diameter, this.diameter);
+  }
+};
