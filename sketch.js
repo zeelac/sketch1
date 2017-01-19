@@ -14,7 +14,7 @@ function setup() {
   h = 100;
   lSpeed = 10;
   hSpeed = 10;
- 
+
 }
 
 function draw() {
@@ -29,11 +29,14 @@ function draw() {
    hSpeed *= -1;
   }
   
-  l += lSpeed;
-  h += hSpeed;
+  l = mouseX;
+  h = mouseY;
+  //l += lSpeed;
+  //h += hSpeed;
    
   background(r, g, b);
-   
+  
+  //links oben
   fill(random(255), random(255), random(255), 200);
   noStroke();
   rect(100, 100, l, h);
@@ -43,6 +46,43 @@ function draw() {
   rect(100, 100, l*random(1), h*random(1));
   fill(random(255), random(255), random(255), 200);
   rect(100, 100, l*random(1), h*random(1));
+  
+  //rechtsunten
+  push();
+  fill(random(255), random(255), random(255), 200);
+  noStroke();
+  rect(dW-100, dH-100, -l, -h);
+  fill(random(255), random(255), random(255), 200);
+  rect(dW-100, dH-100, -l*0.5, -h*0.5);
+  fill(random(255), random(255), random(255), 200);
+  rect(dW-100, dH-100, -l*random(1), -h*random(1));
+  fill(random(255), random(255), random(255), 200);
+  rect(dW-100, dH-100, -l*random(1), -h*random(1));
+  pop();
+ 
+ //links oben
+  fill(random(255), random(255), random(255), 200);
+  noStroke();
+  rect(100, dH-100, l, -h);
+  fill(random(255), random(255), random(255), 200);
+  rect(100, dH-100, l*0.5, -h*0.5);
+  fill(random(255), random(255), random(255), 200);
+  rect(100, dH-100, l*random(1), -h*random(1));
+  fill(random(255), random(255), random(255), 200);
+  rect(100, dH-100, l*random(1), -h*random(1));
+ 
+ //rechtsunten
+  push();
+  fill(random(255), random(255), random(255), 200);
+  noStroke();
+  rect(dW-100, 100, -l, h);
+  fill(random(255), random(255), random(255), 200);
+  rect(dW-100, 100, -l*0.5, h*0.5);
+  fill(random(255), random(255), random(255), 200);
+  rect(dW-100, 100, -l*random(1), h*random(1));
+  fill(random(255), random(255), random(255), 200);
+  rect(dW-100, 100, -l*random(1), h*random(1));
+  pop();
  
   if (r > 255) {
    r = random(255);
