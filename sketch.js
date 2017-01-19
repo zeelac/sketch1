@@ -14,8 +14,6 @@ function setup() {
   h = 100;
   lSpeed = 10;
   hSpeed = 10;
-  
-  create
  
 }
 
