@@ -29,8 +29,9 @@ function draw() {
    hSpeed *= -1;
   }
   
-  l = mouseX;
-  h = mouseY;
+  l = touchX;
+  h = touchY;
+  
   //l += lSpeed;
   //h += hSpeed;
    
