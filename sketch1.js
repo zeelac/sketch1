@@ -1,7 +1,7 @@
 var sliderB, sliderH;
 
 function setup () {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(displayWidth-200, displayHeight-200);
   background(123);
   sliderB = createSlider(0, 200, 50);
   sliderH = createSlider(0, 200, 50);
