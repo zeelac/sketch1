@@ -8,7 +8,7 @@ function setup () {
 }
 
 function draw() {
-  background(random(100,150);
+  background(random(100,150));
   fill(random(255), 0, 50);
   noStroke();
   ellipse(touchX, touchY, sliderB.value(), sliderH.value());
