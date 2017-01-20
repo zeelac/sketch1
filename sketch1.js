@@ -11,5 +11,5 @@ function draw() {
   fill(random(255), 0, 50);
   noStroke();
   rect(touchX, touchY, sliderB.value(), sliderH.value());
-  console.log('sciiiby doo');
+  console.log('sciiiddiby doo');
 }
