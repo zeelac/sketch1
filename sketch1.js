@@ -5,12 +5,18 @@ function setup () {
   //background(123);
   sliderB = createSlider(0, 200, 50);
   sliderH = createSlider(0, 200, 50);
+  
+  capture = createCapture(VIDEO);
+  capture.size(320, 240);
 }
 
 function draw() {
+  ellipse(touchX, touchY, sliderB.value(), sliderH.value());
   background(random(100,150));
   fill(random(255), 0, 50);
   noStroke();
-  ellipse(touchX, touchY, sliderB.value(), sliderH.value());
   console.log('sciiiddiby doo');
+  
+  image(capture, 0, 0, 320, 240);
+  filter('INVERT');
 }
