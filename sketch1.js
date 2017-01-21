@@ -1,4 +1,5 @@
 var sliderB, sliderH;
+var scale;
 
 function setup () {
   createCanvas(displayWidth-500, displayHeight-500);
@@ -16,5 +17,12 @@ function draw() {
   fill(random(255), 0, 50);
   noStroke();
 
-  image(capture, touchX, touchY, 320, 240);
+  image(capture, touchX, touchY, 320*scale, 240*scale);
+}
+
+function deviceMoved() {
+  scale += 0.01
+  if (scale > 1) {
+    scale = 0.1;
+  }
 }
