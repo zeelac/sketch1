@@ -19,7 +19,8 @@ function draw() {
   noStroke();
   
   if (accelerationX > 2) {
-   scale += 0.1; 
+   scale += 0.1;
+   console.log("accelerationX");
    if (scale > 1) {
     scale = 0.1;
    }
@@ -33,4 +34,5 @@ function deviceMoved() {
   if (scale > 1) {
     scale = 0.1;
   }
+  console.log("deviceMoved");
 }
