@@ -12,13 +12,9 @@ function setup () {
 }
 
 function draw() {
-  
-  background(random(100,150));
-  ellipse(touchX, touchY, sliderB.value(), sliderH.value());
+  ellipse(mouseX, mouseY, sliderB.value(), sliderH.value());
   fill(random(255), 0, 50);
   noStroke();
-  console.log('sciiiddiby doo');
-  
+
   image(capture, touchX, touchY, 320, 240);
-  filter('INVERT');
 }
