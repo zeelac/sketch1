@@ -8,7 +8,7 @@ function setup () {
   
   capture = createCapture(VIDEO);
   capture.size(320, 240);
-
+  capture.hide();
 }
 
 function draw() {
@@ -18,7 +18,7 @@ function draw() {
   noStroke();
   console.log('sciiiddiby doo');
   
-  capture.hide();
+  
   image(capture, touchX, touchY, 320, 240);
   filter('INVERT');
 }
