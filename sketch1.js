@@ -10,6 +10,7 @@ function setup () {
   capture = createCapture(VIDEO);
   capture.size(320, 240);
   capture.hide();
+  scale = 1;
 }
 
 function draw() {
